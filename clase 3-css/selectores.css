@@ -1,0 +1,74 @@
+/* 
+Selector universal(*)
+Selecciona todos los elementos 
+*/
+*{
+    color:green;
+}
+
+/*
+selector de tipo
+Selecciona todos los elementos que coinciden con el nombre del elemento especificado.
+*/
+h1{
+    font-size:20px;
+}
+
+/*
+selector de clase
+Selecciona todos los elementos que tienen el atributo de class especificado.
+*/
+.clase{
+    background-color:red;
+}
+
+
+/*
+selector de ID
+Selecciona un elemento basándose en el valor de su atributo id. Solo puede haber un elemento con un determinado ID dentro de un documento.
+*/
+#id{
+    display:inline
+}
+
+/*
+selector de atributo.
+Selecciona elementos basándose en el valor de un determinado atributo.
+*/
+a[target="blank"]{
+    color:red;
+}
+
+/*
+Combinador de hermanos adyacentes
+El combinador + selecciona hermanos adyacentes. Esto quiere decir que el segundo elemento sigue directamente al primero y ambos comparten el mismo elemento padre.
+*/
+span + h2 {
+    color: red;
+}
+
+/*
+combinador de hermanos generales
+El combinador ~ selecciona hermanos. Esto quiere decir que el segundo elemento sigue al primero (no necesariamente de forma inmediata) y ambos comparten el mismo elemento padre
+*/
+span ~ h2 {
+    color : violet;
+}
+
+/*
+combinador de descendiente
+El combinador (espacio) selecciona los elementos que son descendientes del primer elemento.
+*/
+div  h3 {
+    border: solid 1px red;
+}
+/*
+el combinador de hijo
+El combinador > selecciona los elementos que son hijos directos del primer elemento.
+*/
+
+div > h3 {
+    border: solid 1px green;
+}
+
+

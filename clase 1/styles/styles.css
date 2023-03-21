@@ -1,0 +1,22 @@
+p{
+    background-color:red;
+    color:white;
+}
+
+#especial{
+    background-color:blue;
+}
+
+.grupo-1{
+    background-color:yellow;
+    color:black;
+    width:200px;
+}
+
+#cuadrado{
+    width:100px;
+    height:100px;
+    background-image:url("../image/gatito.jpeg");
+    background-size:contain;
+    background-repeat: no-repeat;
+}

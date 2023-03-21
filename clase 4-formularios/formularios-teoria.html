@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+  <H1>FORMULARIOS</H1>
+  <!--
+    etiqueta form:
+    se utiliza para crear un formulario en una página web. Un formulario es una sección interactiva de una página web que permite al usuario ingresar información y enviarla al servidor para su procesamiento -->
+    <form action="/procesar_formulario" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" >
+      <br>
+      <input type="submit" value="Enviar">
+    </form>
+
+    <!--
+      En este ejemplo, la etiqueta "form" se utiliza para definir un formulario que enviará los datos ingresados ​​por el usuario a "/procesar_formulario" utilizando el método POST. También incluye dos campos de entrada de texto para el nombre y el correo electrónico del usuario, así como un botón de envío que se usará para enviar los datos al servidor.
+    -->
+
+    <!--
+      Hay varios tipos de campos de entrada de formulario (inputs) que se pueden utilizar en HTML para recopilar diferentes tipos de datos del usuario. Aquí hay una lista de algunos de los tipos de inputs más comunes:
+    -->
+
+
+    <!-- Se utiliza para permitir al usuario ingresar texto en una sola línea. -->
+    <input type="text">
+
+    <!--Se utiliza para permitir al usuario ingresar una contraseña. Los caracteres se ocultan a medida que se escriben.-->
+    <input type="password">
+
+    <!--Se utiliza para permitir al usuario ingresar una dirección de correo electrónico válida.-->
+    <input type="email">
+    
+    <!--Se utiliza para permitir al usuario ingresar un número.-->
+    <input type="number">
+
+    <!--Se utiliza para permitir al usuario seleccionar una fecha.-->
+    <input type="date">
+
+    <!-- Se utiliza para permitir al usuario seleccionar una o varias opciones de una lista de opciones.-->
+    <!--Cuando el valor del atributo type es radio o checkbox, la presencia de el atributo cheked, Booleano, indica que el control está seleccionado de forma predeterminada. De lo contrario, será ignorado.-->
+    <input type="checkbox" checked>
+
+    <!--  Se utiliza para permitir al usuario seleccionar una opción de un grupo de opciones.-->
+    <input type="radio" checked>
+
+    <!--Se utiliza para enviar un formulario al servidor.-->
+    <input type="submit">
+
+    <!--Se utiliza para restablecer los campos del formulario a sus valores predeterminados.-->
+    <input type="reset">
+
+    <!--permite al usuario seleccionar uno o varios archivos de su dispositivo y enviarlos al servidor junto con el formulario.
+     La opción "enctype" se establece en "multipart/form-data" para indicar que el formulario contiene datos binarios (archivos).
+    -->
+    <input type="file"> 
+
+    <h2>FILE</h2>
+
+    <!--ejemplo de un formulario con un input file-->
+    <!--Si el valor del atributo type es file, el atributo accept indica los tipos de archivo que el servidor acepta, de otra manera será ignorado. El valor debe ser una lista de tipos de contenido únicos, separados por coma-->
+    <form action="/procesar_formulario" method="POST" enctype="multipart/form-data">
+      <label for="archivo">Seleccione un archivo:</label>
+      <input type="file" id="archivo" name="archivo" accept= ".jpg,.png,.doc">
+      <br>
+      <input type="submit" value="Enviar">
+    </form>
+
+
+    <h2>DATA LIST</h2>
+    <!--La etiqueta "datalist" en HTML se utiliza para crear una lista de opciones que se pueden asociar con un input de texto. Cuando el usuario comienza a escribir en el input de texto, se muestran las opciones de la lista que coinciden con lo que se está escribiendo.
+    La estructura básica de la etiqueta "datalist" es la siguiente:
+-->
+<form>
+  <label for="input-id">Input label</label>
+  <input list="datalist-id" id="input-id" name="input-name">
+  <datalist id="datalist-id">
+    <option value="Charmander">
+    <option value="Squirtle">
+    <option value="Bulbasaur">
+    <!-- Más opciones de la lista aquí -->
+  </datalist>
+</form>
+
+<h2>PLACEHOLDER</h2>
+<!--El atributo placeholder
+El atributo placeholder en elementos <input> y <textarea> provee una ayuda a los usuarios acerca de qué debe ser ingresado en el campo. El texto introducido en el placeholder no debe contener «enters» o saltos de línea.-->
+
+  <input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com"/>
+
+  <h2>VALIDACIONES</h2>
+
+  <!--Sintaxis de HTML para la validación restringida
+Los siguientes elementos de sintaxis de HTML5 pueden ser usados para restringir datos en el formulario.-->
+
+<!--El atributo required en los elementos <input>, <select> y <textarea> indica que se debe ingresar algún dato. (En el elemento <input>, required sólo se aplica con ciertos valores del atributo type.)-->
+  <input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/> 
+
+<!--Los atributos "min" y "max" se utilizan comúnmente en los inputs de tipo "number", "range" y "date" en HTML para establecer un rango mínimo y máximo para el valor que se puede ingresar en el input. Aquí hay un ejemplo:-->
+
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" min="18" max="99">
+
+<!--El atributo "maxlength" se utiliza en HTML para especificar la cantidad máxima de caracteres que se pueden ingresar en un input de texto. Aquí hay un ejemplo:-->
+
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" maxlength="10">
+
+<h2>TEXT AREA</h2>
+<!--La etiqueta <textarea> en HTML se utiliza para crear un área de texto en la que un usuario puede ingresar texto de varias líneas. A diferencia de un input de tipo "text", que solo permite una línea de entrada de texto, la etiqueta <textarea> permite a los usuarios ingresar texto en varias líneas.-->
+  <label for="comment">Leave a comment:</label><br>
+<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+
+<h2>VALUE</h2>
+<!--El atributo value del elemento <input> en HTML se utiliza para especificar el valor predeterminado o inicial de un campo de entrada.-->
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" name="nombre" value="Ejemplo de nombre">
+
+
+<!--https://formspree.io/-->
+
+    <form
+  action="https://formspree.io/f/moqzlapq"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <button type="submit">Send</button>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+/*https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes*/
+/*
+Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo, :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
+*/
+#btn:hover{
+    background-color:red;
+    color:white;
+}
+
+/*
+active
+Cuando se usa un mouse, la "activación" generalmente comienza cuando el usuario presiona el botón primario del mouse y termina cuando se suelta.
+*/
+
+#btn:active{
+    background-color:green;
+    color:white;
+}
+
+/*
+visited
+representa enlaces que el usuario ya ha visitado
+*/
+
+a:visited{
+   color:pink
+}
+
+/*
+La pseudo-clase :nth-child() de CSS coincide con uno o más elementos en función de su posición entre un grupo de hermanos.
+
+
+ li:nth-child(3){
+    color:red;
+}
+*/
+/*
+odd
+Representa elementos cuya posición numérica en una serie de hermanos es impar: 1, 3, 5, etc.
+*/
+
+li:nth-child(odd){
+    color:red;
+}
+
+/*
+even
+Representa elementos cuya posición numérica en una serie de hermanos es par: 2, 4, 6, etc.
+
+*/
+li:nth-child(even){
+    color:blue;
+}

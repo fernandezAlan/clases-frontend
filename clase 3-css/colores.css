@@ -1,0 +1,19 @@
+/*https://htmlcolorcodes.com/es/*/
+/*en css puedes seleccionar los colores de 3 formas distintas*/
+/*con su nombre*/
+
+/*3 formas de aplicar el color rojo a un elemento*/
+body{
+    background-color:red;
+}
+
+/*codigo hexadecimal*/
+
+body{
+    background-color:#ff0000
+}
+
+/*RGB*/
+body{
+    background-color:rgb(255,0,0)
+}

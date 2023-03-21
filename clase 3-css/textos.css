@@ -1,0 +1,72 @@
+/*
+font-family
+Usamos la propiedad font-family para definir un tipo de letra diferente para nuestro texto. Esta propiedad indica al navegador el tipo de letra (o una lista de tipos de letra) que debe aplicar a los elementos seleccionados.
+*/
+body{
+    font-family:sans-serif;
+}
+
+
+/*
+Listas de tipos de letra
+Ya que no puedes garantizar la disponibilidad de los tipos de letra que deseas utilizar (incluso un tipo de letra seguro para la web podría fallar por alguna razón), puedes proporcionar un lista de tipos de letra para que el navegador tenga diversos tipos de letra entre los que elegir. Consiste simplemente en introducirlo como el valor de font-family, que consistirá en una lista de diversos nombres de tipos de letra separados por comas, por ejemplo.
+*/
+
+p {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+  }
+
+  /*
+  font-size
+  se utiliza para establecer el tamaño de la fuente de un elemento
+  */
+
+  p{
+      font-size:20px;
+  }
+
+  /*
+    font-weight:
+  Establece el grueso o peso del texto. Puede haber muchos valores si dispones de muchas variantes de fuente (como -light, -normal, -bold, -extrabold, -black, etc.), pero en realidad raramente usarás alguna de ellas, más allá de los estilos normal y bold:
+  */
+
+  p{
+      font-weight:bold;
+  }
+
+  /*
+  text-decoration:
+   Activa/desactiva decoraciones en los tipos de letra (usarás esto principalmente para desactivar el subrayado por defecto de los enlaces al aplicarles estilo). Los valores disponibles son:
+   none: Desactiva cualquier decoración de texto que presente.
+    underline: Subraya el texto.
+    overline: Proporciona al texto una línea superpuesta.
+    line-through: Coloca un tachado sobre el texto.
+  */
+  ul{
+      text-decoration:none;
+  }
+  /*
+  text-align:
+   se usa para controlar la forma en que el texto se alinea dentro de la caja que lo contiene
+  */
+
+  h1{
+      text-align:center;
+  }
+  /*
+  line-height :
+   establece la altura entre cada línea de texto
+  */
+  p{
+      line-height:20px;
+  }
+  /*
+  Las propiedades letter-spacing  y word-spacing  te permiten establecer el espacio entre las letras y entre las palabras del texto.
+  */
+
+  p{
+    letter-spacing:2px;
+    word-spacing:4px
+  }
+
+  

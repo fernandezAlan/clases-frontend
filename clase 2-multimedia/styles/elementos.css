@@ -1,0 +1,23 @@
+body{
+    background-image:url("https://img.freepik.com/fotos-premium/bonitos-lindos-gatitos-ilustracion-realista-digital-gato-bebe-cara-frontal-buena-iluminacion_510654-340.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+/*
+este es un comentario
+*/
+p{
+    width:49%;
+    display:inline-block
+}
+
+h1{
+    text-align:center;
+}
+
+div{
+    width:100px;
+    height:100px;
+    background-color:blue;
+    border-radius:15px;
+}

@@ -1,0 +1,36 @@
+/*
+fuentes gratis
+https://www.fontsquirrel.com/
+https://www.dafont.com/es/
+https://everythingfonts.com/
+https://fonts.google.com/
+*/
+
+
+/*
+Las tipografías web son una función del CSS que te permite especificar los archivos de tipo de letra que se van a descargar junto con tu sitio web a medida que el usuario acceda a ellos, lo que significa que cualquier navegador que admita tipografías web puede disponer de los tipos de letra que especificas.
+*/
+
+
+
+/*
+En primer lugar, tienes un bloque @font-face al comienzo del CSS, que especifica los archivos de los tipos de letra que quieres que se descarguen:
+*/
+
+
+@font-face {
+    font-family: "myFont";
+    src: url("AlexBrush-Regular.ttf");
+  }
+  
+  h1{
+    font-family: "myFont";
+    font-size:40px;
+  }
+  h3{
+    font-family:'Montserrat'
+  }
+  /*
+  A continuación, puedes usar el nombre  especificado en @font-face para aplicar tu tipo de letra personalizado a cualquier elemento que desees:
+  */
+  
