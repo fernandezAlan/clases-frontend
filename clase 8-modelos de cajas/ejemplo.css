@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background: yellow;
+    border: solid 12px black;
+    padding: 12px;
+    margin: 86px;
+  
+}
+#contenedor{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+}
+#contenedor2{
+    display:flex;
+    width:100vw;
+    height:100vh;
+    background-color:green;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+div > p {
+    width:200px;
+    height:200px;
+    background-color:red;
+    color:white
+}
+#item{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

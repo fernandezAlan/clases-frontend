@@ -1,0 +1,81 @@
+/*
+Márgenes, relleno y bordes
+*/
+ .box{
+    width:300px;//ancho del contenido de la caja
+    heigth:300px;// altura del contenido de la caja
+    margin:50px; // margen de separacion con respecto a otros elementos 
+    padding:10px;// espacio de separacion entre el contenido y el borde de la caja
+    border: solid 5px black; // aca se definen 3 propiedades del borde de la caja(tipo de borde-tamaño-color)
+ }
+ /*
+  Las propiedades que hemos usado en ese ejemplo son propiedades abreviadas y nos permiten establecer los cuatro lados de la caja a la vez. Estas propiedades abreviadas también tienen propiedades sin abreviar equivalentes, que permiten tener control sobre los diferentes lados de la caja de forma individual.
+ */
+
+ /*
+ MARGIN
+ El margen es un espacio invisible que hay alrededor de la caja. Aleja el resto de elementos de la caja. Los márgenes pueden tener valores positivos o negativos. Establecer un margen negativo para un lado de tu caja puede hacer que se superponga con otros elementos de la página. Tanto si utilizas el modelo de cajas estándar como el alternativo, el margen siempre se añade después de haber calculado el tamaño de la caja que se ve.
+
+Podemos controlar todos los márgenes de un elemento a la vez usando la propiedad margin, o cada lado individualmente usando las propiedades equivalentes sin abreviar:
+ */
+
+ .box {
+    margin-top:10px;// define el margin de la parte superior de la caja
+    margin-left:30px;// define el margin izquierdo de la caja
+    margin-right:30px;// define el margin derecho de la caja
+    margin-bottom:10px; // define el margin de la parte inferior de la caja 
+ }
+
+ /*
+ padding
+ El relleno se encuentra entre el borde y el área de contenido. A diferencia de los márgenes, el relleno no puede tomar valores negativos, por lo que el valor debe ser 0 o positivo. Cualquier fondo aplicado a tu elemento se mostrará detrás del área de relleno y, generalmente, se usa para mantener el contenido alejado del borde.
+
+Podemos controlar el área de relleno para todos los lados de un mismo elemento usando la propiedad padding, o para cada uno de los lados usando las propiedades equivalentes:
+ */
+ .box {
+    padding-top:10px;// define el padding de la parte superior de la caja
+    padding-left:30px;// define el padding izquierdo de la caja
+    padding-right:30px;// define el padding derecho de la caja
+    padding-bottom:10px; // define el padding de la parte inferior de la caja 
+ }
+ /*
+ Bordes
+El borde se dibuja entre el margen y el área de relleno de una caja. Si utilizas el modelo de cajas estándar, el tamaño del borde se añade a los elementos width y height que establecen el alto y el ancho de la caja. Si utilizas el modelo de cajas alternativo, el tamaño del borde reduce el tamaño de la caja de contenido, porque ocupa una parte del alto y el ancho disponibles.
+
+Hay una gran cantidad de propiedades que sirven para aplicar estilo a los bordes: hay cuatro bordes y cada borde tiene un estilo, un ancho y un color que podemos modificar.
+
+Puedes establecer el ancho, el estilo o el color de los cuatro bordes a la vez utilizando la propiedad border.
+ */
+
+ /*
+ Para establecer las propiedades de cada lado de forma individual, puedes utilizar:
+ */
+
+ .box{
+    border-top: solid 3px black;
+    border-bottom: dotted  1px green;
+    border-left: double 10px rgb(23,45,145);
+    border-right: dotted 9px #57bfc6;
+ }
+
+ /*
+ Para establecer el ancho, el estilo o el color de todos los lados, usa lo siguiente:
+    border-width
+    border-style
+    border-color
+    border: solid 1px blue;
+
+Para establecer el ancho, el estilo o el color de un solo lado, puedes usar una de las propiedades no abreviadas:
+    border-top-width 
+    border-top-style 
+    border-top-color
+    border-right-width 
+    border-right-style 
+    border-right-color 
+    border-bottom-width
+    border-bottom-style
+    border-bottom-color
+    border-left-width 
+    border-left-style 
+    border-left-color
+ */
