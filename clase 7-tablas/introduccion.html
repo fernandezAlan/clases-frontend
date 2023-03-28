@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>clase 7</title>
+</head>
+<body>
+    <h1>TABLAS</h1>
+    <h2>¿que es una tabla?</h2>
+    <p>Una tabla es un conjunto estructurado de datos distribuidos en filas y columnas (datos tabulados). Una tabla permite buscar con rapidez y facilidad valores entre diferentes tipos de datos que indiquen algún tipo de conexión. Por ejemplo, una persona y su edad, o un día de la semana o el horario de una piscina municipal.</p>
+    <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics/numbers-table.png" alt="">
+
+    <h2>¿Qué etiquetas conforman una tabla en html?</h2>
+    <ul>
+        <li>
+            <h3>&lt;table&gt;:</h3>
+            <p>Esta etiqueta define la tabla en sí misma y envuelve todo el contenido de la tabla</p>
+        </li>
+        <li>
+            <h3>&lt;tr&gt;:</h3>
+            <p>Esta etiqueta define una fila de la tabla.</p>
+        </li>
+        <li>
+            <h3>&lt;th&gt;:</h3>
+            <p>Esta etiqueta define una celda de encabezado en una fila de la tabla. Las celdas de encabezado se utilizan comúnmente para mostrar los títulos de las columnas.</p>
+        </li>
+        <li>
+            <h3>&lt;th&gt;:</h3>
+            <p>Esta etiqueta define una celda de encabezado en una fila de la tabla. Las celdas de encabezado se utilizan comúnmente para mostrar los títulos de las columnas.</p>
+        </li>
+        <li>
+            <h3>&lt;td&gt;:</h3>
+            <p>Esta etiqueta define una celda de datos en una fila de la tabla. Las celdas de datos se utilizan para mostrar los datos de la tabla.</p>
+        </li>
+        <li>
+            <h3>&lt;thead&gt;:</h3>
+            <p>Esta etiqueta define el encabezado de la tabla y envuelve las filas de encabezado <!--(<tr> con <th>)-->.</p>
+        </li>
+        <li>
+            <h3>&lt;tbody&gt;:</h3>
+            <p>Esta etiqueta define el cuerpo de la tabla y envuelve las filas de datos <!--(<tr> con <td>).-->.</p>
+        </li>
+        <li>
+            <h3>&lt;tfoot&gt;:</h3>
+            <p>Esta etiqueta define el pie de la tabla y envuelve las filas de resumen <!--(<tr> con <td>).-->.</p>
+        </li>
+        <li>
+            <h3>&lt;caption&gt;:</h3>
+            <p>Esta etiqueta se utiliza para agregar un título o descripción a la tabla <!--(<tr> con <td>).-->.</p>
+        </li>
+    </ul>
+    <a href="./ejemplo.html">ver el ejemplo</a>
+    <h2>Abarcar varias celdas o columnas</h2>
+    <p>Para hacer que un dato abarque varias celdas o columnas en una tabla HTML, se utiliza la etiqueta td o th con el atributo colspan o rowspan.</p>
+    <p>
+        El atributo <strong>colspan</strong>  se utiliza para especificar el número de columnas que el dato debe abarcar. Por ejemplo, si se quiere que un dato ocupe dos columnas, se utiliza colspan="2"
+    </p>
+    <p>
+        El atributo <strong>rowspan</strong>  se utiliza para especificar el número de filas que el dato debe abarcar. Por ejemplo, si se quiere que un dato ocupe dos filas, se utiliza rowspan="2"
+    </p>
+    <p>ejemplo con colspan:</p>
+    <table border="1">
+        <tr>
+          <th>Producto</th>
+          <th colspan="2">Precio</th>
+        </tr>
+        <tr>
+          <td>Leche</td>
+          <td>$1.50</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td >Descuento</td>
+          <td colspan="2">10%</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td colspan="2">$2.70</td>
+        </tr>
+      </table>
+      <p>ejemplo con rowspan:</p>
+      <table border="1">
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+        </tr>
+        <tr>
+          <td>María</td>
+          <td rowspan="2">25</td>
+          <td>Madrid</td>
+        </tr>
+        <tr>
+          <td>Pedro</td>
+          <td>Barcelona</td>
+        </tr>
+        <tr>
+          <td>Juan</td>
+          <td>30</td>
+          <td>Valencia</td>
+        </tr>
+        <tr>
+          <td>Lucía</td>
+          <td>28</td>
+          <td>Bilbao</td>
+        </tr>
+      </table>
+</body>
+</html>

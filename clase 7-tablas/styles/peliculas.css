@@ -1,0 +1,33 @@
+*{
+    font-family:sans-serif;
+}
+table {
+	border-collapse: collapse;
+	margin: 20px auto;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid black;
+}
+
+caption {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+thead {
+	background-color: #ddd;
+}
+
+tfoot {
+	background-color: #ddd;
+}
+
+tfoot td {
+	font-weight: bold;
+	text-align: right;
+}
+tfoot > tr > td{
+        text-align: center;
+}
