@@ -1,0 +1,240 @@
+*{
+    font-family:sans-serif;
+    padding:0px;
+    margin:0px;
+    color:#141414;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    width:100vw;
+    display:grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10% 70% 20%;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+header{
+    grid-area: header;
+    background-color:#141414;
+    color:white;
+}
+aside {
+    grid-area: sidebar;
+    background-color:#e1dddd;
+    padding-left:40px;
+}
+main {
+    grid-area: main;
+    padding:0px 40px;
+}
+
+footer{
+    grid-area:footer;
+    color:white;
+    background-color:#141414;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:0px 40px;
+}
+li {
+    list-style:none;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+
+aside  a {
+    color:black;
+}
+
+header ul {
+    display: flex;
+    width:70%;
+    justify-content:space-around;
+    align-items:center;
+    height:100%;
+    margin:auto;
+}
+header nav {
+    height:100%;
+}
+footer p {
+    color:white;
+    text-align:center;
+    align-self:end;
+    width: 100%;
+}
+
+aside h2 {
+    margin-top:50px;
+}
+
+aside ul {
+    display:flex;
+    flex-direction:column;
+    height:50%;
+    justify-content: space-evenly;
+}
+aside a{
+    color:gray;
+}
+
+main h1 {
+    text-align:center;
+    margin: 20px 0px;
+}
+
+footer ul {
+    display: flex;
+    justify-content:space-around
+}
+main img {
+    width:100px;
+    height:200px;
+    object-fit:cover;
+}
+
+main h2{
+    font-size:17px;
+}
+
+main div {
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#category-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#menu{
+    display:none;
+}
+
+/*
+RESPONSIVE
+*/
+
+/*
+la siguiente regla de CSS  se utiliza para aplicar estilos a un elemento HTML cuando se cumple una cierta condición de ancho de pantalla. En este caso, la condición es que la pantalla tenga un ancho maximo de 500 píxeles
+*/
+
+/*
+Propiedades max-width y min-width
+
+Hay dos cosas que debes tener en cuenta al crear media queries para diferentes tamaños de pantalla: las propiedades max-width y min-width.
+
+Cuando se pasa una propiedad max-width a un media query, CSS lo interpreta como un ancho que comienza en cero – eso si aún no se ha establecido una propiedad de ancho mínimo. Pronto llegaremos a eso.
+
+Una vez que la propiedad max-width tiene un valor asignado, todos los estilos dentro de esa media query particular se aplicarán a cualquier dispositivo cuyo tamaño de pantalla abaque desde 0px hasta el ancho máximo especificado.
+
+La propiedad min-width, por otro lado, toma el valor inicial que le has asignado y aplica los estilos dentro de la regla del media query hasta que se proporcione el siguiente max-width is provided
+*/
+
+/*
+dispositivos mobiles pequeños
+*/
+@media (max-width: 500px){
+    body{
+    
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 80% 20%;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    aside {
+        display:none;
+    }
+
+    header ul {
+      display:none;
+    }
+    #menu{
+        display:block;
+        color:white;
+        font-size:25px;
+    }
+    nav{
+        display:flex;
+        align-items:center;
+        justify-content:end;
+        padding:0px 20px;
+    }
+    h1 {
+        font-size:25px;
+    }
+    main p {
+        font-size:20px;
+        margin-bottom:10px;
+    }
+    #category-container{
+        display:flex;
+        flex-direction:column;
+    }
+    #category-container  img {
+        width:100px;
+        height:100px;
+        border-radius:9999px;
+    }
+   
+
+    main div {
+        display:grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto;
+    }
+    footer ul {
+        display: none;
+    }
+    main p {
+        display: none;
+    }
+    #text-mobile{
+        display:block;
+    }
+
+}
+
+/*
+tablets
+*/
+@media (min-width: 800px) and (max-width: 1000px) {
+    p{
+        font-size:25px;
+    }
+
+    h1 {
+        font-size:32px;
+    }
+    
+    main img {
+        width:150px;
+        height:150px;
+    }
+
+    body{
+        grid-template-rows: 10% 60% 30%;
+    }
+    header ul {
+        width:90%;
+    }
+    footer p {
+        font-size:17px;
+    }
+    footer{
+        padding-bottom:40px;
+    }
+    a{
+        font-size:17px;
+    }
+}
