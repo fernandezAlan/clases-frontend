@@ -1,0 +1,22 @@
+
+.carousel{
+   width:500px;
+}
+
+form {
+    width:50%;
+    margin:auto;
+}
+
+.table{
+    width:600px;
+    margin:auto;
+}
+
+.container{
+    background-color:yellow;
+}
+
+.col{
+    border:solid 1px black;
+}
