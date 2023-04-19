@@ -1,0 +1,105 @@
+#element{
+    width:100px;
+    height:100px;
+    background-color:blue;
+    //animation-name:test;
+    //animation-duration:6s;
+    //animation-direction:normal;
+}
+/*
+#element_2{
+    width:100px;
+    height:100px;
+    background-color:red;
+    border-radius:1000px;
+    position:relative;
+    left:500px;
+     animation-name:circle;
+    animation-duration:4s;
+    animation-timing-function: ease-out;
+    //animation-delay:2s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}
+*/
+
+
+#element_2{
+    width:100px;
+    height:100px;
+    background-color:red;
+    border-radius:1000px;
+    position:relative;
+   // top:300px;
+    //animation: circle 2s infinite alternate
+}
+
+.element_3{
+    width:100px;
+    height:100px;
+    background-color:green;
+    display:inline-block;
+    margin:20px;
+   position:relative;
+    top:0px;
+}
+
+.element_3:hover{
+    animation: test_2 2s 
+}
+
+@keyframes test_2 {
+    form{
+        transform: scale(0);
+      // width:100px;
+      // height:100px;
+        //background-color:green;
+       // border-radius:0px;
+    }
+    to{
+        transform: scale(1.5);
+        //width:200px;
+        //height:200px;
+        //background-color:blue;
+        //border-radius:1000px;
+    }
+
+}
+
+
+@keyframes circle {
+    from{
+        top:0px
+    }
+    to{
+        top:300px
+    }
+}
+
+@keyframes test1{
+    from{
+        background-color:red; 
+    }
+    to{
+        background-color:blue;
+    }
+}
+
+@keyframes test{
+   0%{
+    background-color:red;
+    border-radius:0px;
+   }
+   50%{
+    background-color:green;
+    border-radius:100px;
+   }
+   75%{
+    background-color:yellow;
+    border-radius:0px;
+   }
+   100%{
+    background-color:blue;
+    border-radius:100px;
+   }
+}

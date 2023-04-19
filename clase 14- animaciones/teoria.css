@@ -1,0 +1,89 @@
+/*
+
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+
+Las animaciones CSS3 permiten animar la transición entre un estilo CSS y otro. Las animaciones constan de dos componentes: un estilo que describe la animación CSS y un conjunto de fotogramas que indican su estado inicial y final, así como posibles puntos intermedios en la misma.
+
+* Configurando la animación
+Para crear una secuencia de animación CSS, tú estilizarás el elemento que quieras animar con la propiedad animation y sus sub-propiedades. Con ellas podemos no solo configurar el ritmo y la duración de la animación sino otros detalles sobre la secuencia de la animación. Con ellas no configuramos la apariencia actual de la animación, para ello disponemos de @keyframes
+
+Las subpropiedades de animation son:
+*/
+
+/*
+* animation-delay
+La propiedad CSS animation-delay especifica el tiempo de retardo que debe transcurrir antes de comenzar la animación. Esto permite que la secuencia de animación no comience nada más ser aplicada a un elemento.
+
+El valor 0, que es el valor por defecto, indica que la animación debería comenzar inmediatamente. Usando otro valor, definimos el retardo entre el momento en que el elemento recibe la animación y el comienzo de la secuencia de la misma.
+*/
+
+.element{
+    animation-delay:2s
+}
+
+/*
+animation-direction
+Indica si la animación debe retroceder hasta el fotograma de inicio al finalizar la secuencia o si debe comenzar desde el principio al llegar al final.
+https://developer.mozilla.org/es/docs/Web/CSS/animation-direction
+*/
+
+.element{
+    animation-direction:reverse;
+}
+
+/*
+animation-duration
+Indica la cantidad de tiempo que la animación consume en completar su ciclo (duración).
+*/
+.element{
+    animation-duration:3s;
+}
+
+/*
+animation-name
+Especifica el nombre de la regla @keyframes que describe los fotogramas de la animación.
+*/
+
+.element{
+    animation-name:name;
+}
+
+/*
+https://developer.mozilla.org/es/docs/Web/CSS/animation-timing-function
+animation-timing-function
+La propiedad CSS animation-timing-function especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias
+*/
+
+.element{
+animation-timing-function: ease;
+animation-timing-function: ease-in;
+animation-timing-function: ease-out;
+animation-timing-function: ease-in-out;
+animation-timing-function: linear;
+animation-timing-function: step-start;
+animation-timing-function: step-end;
+}
+
+/*
+La versión abreviada animation es usado para ahorrar espacio
+*/
+
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  /*
+  Se puede reemplazar por
+  */
+  p {
+    animation: 3s infinite alternate slidein;
+  }
+
+  /*
+  La regla arroba @keyframes permite a los autores controlar los pasos intermedios en una secuencia de animación CSS mediante el establecimiento de keyframes (o puntos de trayectoria) a lo largo de la secuencia de animación que debe ser alcanzado por determinados puntos durante la animación. Esto le da un control más específico sobre los pasos intermedios de la secuencia de animación que se obtiene al dejar que el navegador maneje todo automáticamente.
+  */
+
+  
