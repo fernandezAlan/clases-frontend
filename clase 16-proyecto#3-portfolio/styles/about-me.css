@@ -1,0 +1,103 @@
+main{
+    padding-left: 25vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:90vh;
+}
+#about-me-title{
+    font-size:70px;
+    font-family:'Bebas Neue', cursive;
+    color:#F54855;
+    margin:0px;
+    animation: titleAnimation 2s ease;
+}
+#info-about{
+    background-color:black;
+    padding:80px;
+    border-radius:10px;
+    opacity:0.8;
+    width:600px;
+    //margin:auto;
+    padding-top:0px;
+    animation: info 2s;
+}
+
+#profile{
+    width:200px;
+    height:200px;
+    border-radius:9999px;
+    object-fit:cover;
+    position:absolute;
+    object-position: 60%;
+    border: solid 5px #F54855;
+    left:12%;
+    top:50%;
+    z-index:2;
+    animation:profileAnimation 3s infinite alternate ease-out;
+    animation-delay:2s;
+}
+#info-about > div {
+    display:flex;
+    justify-content:space-between;
+    width:30%;
+    margin: auto;
+    padding-top: 40px;
+}
+svg{
+    filter: brightness(0.8);
+}
+
+svg:hover{
+    animation: iconHover 0.5s forwards;
+    filter: brightness(1);
+}
+
+#marte{
+    position:absolute;
+    left:50%;
+}
+/*animations*/
+
+@keyframes profileAnimation {
+    from {
+        object-position: 60%;
+    }
+    to{
+        object-position: 20%;
+    }
+}
+
+@keyframes iconHover {
+    from{
+        transform:scale(1)
+    }
+    to{
+        transform:scale(1.1)
+    }
+}
+
+@keyframes titleAnimation{
+    from{
+        position:relative;
+        top:-40px;
+        opacity:0
+    }
+    to{
+        position:relative;
+        top:0px;
+        opacity:1
+    }
+}
+
+@keyframes info {
+    from{
+        position:relative;
+        right:-40px;
+        //opacity:0
+    }to{
+        position:relative;
+        right:0px;
+       // opacity:1
+    }
+}
