@@ -131,7 +131,7 @@ mobile
 */
 @media (max-width:800px){
     aside{
-        display:none;
+        display:none; //ocultar
     }
     body{
         grid-template-columns: 100%;
@@ -142,12 +142,12 @@ mobile
         "footer";
     }
     header ul {
-        display:none;
+        display:none; //oculatando
     }
-
+    
     header p {
         color:white;
-        display:block;
+        display:block; //mostrar
         font-size:24px;
     }
     nav {
@@ -159,7 +159,7 @@ mobile
     main img {
         width:100px;
         height:100px;
-        border-radius:9999px;
+        border-radius:99999px;
     }
     #category-container {
         display:flex;
@@ -173,7 +173,7 @@ mobile
     footer ul {
         display:none;
     }
-
+    
     #mobile {
         display:block;
         font-size:20px;
@@ -181,8 +181,11 @@ mobile
     #desktop{
         display:none;
     }
+    /*
+    */
 }
 
+/*
 @media (min-width:800px) and (max-width:1000px){
     p{
         font-size:25px;
@@ -214,3 +217,5 @@ mobile
         font-size:17px;
     }
 }
+
+*/

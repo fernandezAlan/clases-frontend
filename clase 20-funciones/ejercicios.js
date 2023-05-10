@@ -41,9 +41,63 @@ function mayor(num1,num2){
 1- escribir una funcion que tome un arreglo con numeros y devuelva un arreglo nuevo con todos esos numeros multiplicados por dos
 2-escribir una funcion que tome un arreglo con strings y devuelva un nuevo arreglo con todos esos strings pero en mayuscula
 3-escribir una funcion que tome un arreglo con numeros y strings y devolver un nuevo arreglo solo con numeros
-4- escribir una funcion que tome un arreglo con numeros y devolver un nuevo arreglo con solamente los numeros que sean pares
+
 */
 
+//3
+function numeros(arr){
+    var numbers = []
+    for(var i=0;i<arr.length;i++){
+        if(typeof(arr[i])==="number"){
+            numbers.push(arr[i])
+        }
+    }
+    return numbers
+}
+
+/*
+4- escribir una funcion que tome un arreglo con numeros y devolver un nuevo arreglo con solamente los numeros que sean pares
+*/
+function pares(arr){
+    var newArr = []
+    for(var i=0;i<arr.length;i++){
+        if(typeof(arr[i])==="number" && arr[i]%2===0){
+            newArr.push(arr[i])
+        }
+    }
+    return newArr
+}
+
+//funciones callbacks
+function filter(arr,fn){
+    var newArr = []
+    for(var i=0;i<arr.length;i++){
+        //true -false
+        var cond = fn(arr[i])
+        if(cond){
+            newArr.push(arr[i])
+        }
+    }
+    return newArr
+}
+//metodos de arreglos
+var arr = [1,2,3,4,5,6]
+arr.filter(function(el){
+    return  el%2==0
+})
+
+arr.map(function(el){
+    return el *2
+})
+
+arr.forEach(function(el){
+    console.log(el)
+})
+
+arr.reduce(function(acc,current){
+    return acc + current
+})
+///
 function multiplicar(arr){
     var newArr = []
     for(var i=0;i<arr.length;i++){
@@ -51,3 +105,22 @@ function multiplicar(arr){
     }
     return newArr;
 }
+
+function mayusculas(arr){
+    var newArr=[]
+    for(var i=0;i<arr.length;i++){
+        newArr.push(arr[i].toUpperCase())
+    }
+    return newArr
+}
+
+
+function map(arr,fn){
+var newArr=[]
+for(var i=0;i<arr.length;i++){
+    var res = fn(arr[i])
+    newArr.push(res)
+}
+return newArr
+}
+
